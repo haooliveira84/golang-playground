@@ -7,10 +7,12 @@ import (
 )
 
 func main() {
-	var filename = string(os.Args[1])
-	if len(filename) < 2 {
+	if len(os.Args) < 2 {
 		fmt.Println("Missing parameter")
+		return
 	}
+	var filename = string(os.Args[1])
+	fmt.Println(len(filename))
 	file, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Can't read file", filename)
