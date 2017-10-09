@@ -12,7 +12,6 @@ func main() {
 		return
 	}
 	var filename = string(os.Args[1])
-	fmt.Println(len(filename))
 	file, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Can't read file", filename)
